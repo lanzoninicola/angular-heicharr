@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+.user-badge-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+
+  .user-details {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+      color: $white;
+      text-align: center;
+    }
+
+    .email {
+      font-size: 0.8rem;
+      color: $grey;
+    }
+  }
+}

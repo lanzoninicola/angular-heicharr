@@ -11,13 +11,16 @@
       [opened]="(breakpointService.isHandset$ | async) === false"
     >
       <div class="sidenav-content">
-        <ahr-logo></ahr-logo>
-        <div class="sidenav-menu">
-          <span>Menu</span>
-          <hr />
-          <ahr-nav-list></ahr-nav-list>
+        <div class="sidenav-main">
+          <ahr-logo></ahr-logo>
+          <div class="sidenav-menu">
+            <span>Menu</span>
+            <hr />
+            <ahr-nav-list></ahr-nav-list>
+          </div>
         </div>
-        <div class="user">
+
+        <div class="sidenav-user">
           <ahr-user-badge></ahr-user-badge>
           <ahr-logout-button></ahr-logout-button>
         </div>

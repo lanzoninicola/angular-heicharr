@@ -3,19 +3,17 @@ import { NgModule } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { AuthenticationModule } from './authentication/authentication.module';
 import { CoreModule } from './core/core.module';
 import { HttpBackendErrorInterceptor } from './core/interceptors/http-backend-error.interceptor';
 import { FormSubmissionInterceptor } from './dynamic-form/interceptors/form-submission.interceptor';
 import { NavigationModule } from './navigation/navigation.module';
 import { SharedModule } from './shared/shared.module';
-
-import { AuthModule } from '@auth0/auth0-angular';
-import { environment as env } from 'src/environments/environment';
-import { AuthenticationModule } from './authentication/authentication.module';
 
 // https://www.personio.com/
 

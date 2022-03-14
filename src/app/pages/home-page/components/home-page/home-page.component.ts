@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '@auth0/auth0-angular';
-import { of, Subscription, switchMap } from 'rxjs';
+import { Subscription } from 'rxjs';
+import { AuthenticationService } from 'src/app/authentication/services/authentication.service';
 import { BreakpointService } from 'src/app/core/services/breakpoint.service';
 import { UserService } from 'src/app/pages/users/services/user.service';
 
@@ -15,7 +15,7 @@ export class HomePageComponent implements OnInit {
 
   constructor(
     public breakpointService: BreakpointService,
-    public authz: AuthService,
+    public authService: AuthenticationService,
     private _userService: UserService,
     private _router: Router
   ) {}
@@ -23,7 +23,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     console.log('home init');
 
-    this._loadAppUser();
+    this._loadAppUserData();
 
     this._dashboardRedirect();
   }
@@ -32,19 +32,12 @@ export class HomePageComponent implements OnInit {
     this.sub.unsubscribe();
   }
 
-  private _loadAppUser() {
-    const { authz, _userService } = this;
+  private _loadAppUserData() {
+    const { _userService } = this;
 
     this.sub.add(
-      authz.user$
-        .pipe(
-          switchMap((userAuthz) => {
-            if (userAuthz?.email) {
-              return _userService.findByEmail(userAuthz.email);
-            }
-            return of(null);
-          })
-        )
+      _userService
+        .getUserDataFromAuthParty()
         .subscribe((userModel) =>
           this._userService.stateAuthCurrentUser$.next(userModel)
         )

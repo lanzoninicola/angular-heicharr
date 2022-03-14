@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '@auth0/auth0-angular';
 
 import { LoginComponent } from './authentication/components/login/login.component';
+import { UserAuthResolver } from './authentication/routing/user-auth.resolver';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
       import('./pages/dashboard/dashboard.module').then((m) => {
         return m.DashboardModule;
       }),
+    resolve: {
+      userAuth: UserAuthResolver,
+    },
     canActivate: [AuthGuard],
   },
   {

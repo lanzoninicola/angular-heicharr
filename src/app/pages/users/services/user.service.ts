@@ -8,7 +8,9 @@ import {
   shareReplay,
   switchMap,
 } from 'rxjs';
+import { AuthenticationService } from 'src/app/authentication/services/authentication.service';
 import { EntityState } from 'src/app/core/types/entityState.type';
+import { PicklistItemModel } from '../../settings/models/picklist-item.model';
 
 import { DepartmentService } from '../../settings/services/department/department.service';
 import { PicklistService } from '../../settings/services/picklist/picklist.service';
@@ -24,13 +26,15 @@ import { UserSerializerService } from './user-serializer.service';
 export class UserService {
   stateUserSelected$ = new BehaviorSubject<UserModel | null>(null);
   stateEntityState$ = new BehaviorSubject<EntityState>('idle');
-  stateUserAuthenticated$ = new BehaviorSubject<UserModel | null>(null);
+  stateAuthCurrentUser$ = new BehaviorSubject<UserModel | null>(null);
+  stateAuthCurrentUserEmail$ = new BehaviorSubject<string | null>(null);
 
   constructor(
     private _http: UserHttpService,
     private _picklistService: PicklistService,
     private _departmentService: DepartmentService,
-    private _serializerService: UserSerializerService
+    private _serializerService: UserSerializerService,
+    private _authService: AuthenticationService
   ) {}
 
   findAll(): Observable<UsersCollection> {
@@ -126,6 +130,19 @@ export class UserService {
       formData.departments,
       formData.businessUnit,
       formData.isAdmin
+    );
+  }
+
+  getUserDataFromAuthParty(): Observable<UserModel | null> {
+    const { _authService } = this;
+
+    return _authService.authUser$.pipe(
+      switchMap((userAuthz) => {
+        if (userAuthz?.email) {
+          return this.findByEmail(userAuthz.email);
+        }
+        return of(null);
+      })
     );
   }
 }

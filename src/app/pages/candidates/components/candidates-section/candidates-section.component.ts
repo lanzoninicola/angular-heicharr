@@ -28,6 +28,7 @@ export class CandidatesSectionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('candidate section init');
     this.router.navigate(['candidates', 'list']);
     this.pageTitle = 'Candidates';
   }

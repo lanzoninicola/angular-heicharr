@@ -2,14 +2,14 @@ import { DepartmentModel } from '../../settings/models/department.model';
 import { PicklistItemModel } from '../../settings/models/picklist-item.model';
 
 export class UserModel {
-  private id: number;
-  private firstname: string;
-  private lastname: string;
-  private email: string;
-  private recruitingRole: PicklistItemModel;
-  private department: DepartmentModel;
-  private businessUnit: PicklistItemModel | null;
-  private isAdmin: boolean;
+  id: number;
+  firstname: string;
+  lastname: string;
+  email: string;
+  recruitingRole: PicklistItemModel;
+  department: DepartmentModel;
+  businessUnit: PicklistItemModel | null;
+  isAdmin: boolean;
 
   constructor(
     id: number,

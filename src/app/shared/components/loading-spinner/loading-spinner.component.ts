@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 
 @Component({
@@ -9,7 +9,7 @@ import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
         <div class="loading-spinner-wrapper">
           <mat-progress-spinner [mode]="mode" [diameter]="50">
           </mat-progress-spinner>
-          <span class="loading-text">Loading...</span>
+          <span class="loading-text">{{ loadingText }}</span>
         </div>
       </div>
     </div>
@@ -17,6 +17,9 @@ import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
   styleUrls: ['./loading-spinner.component.scss'],
 })
 export class LoadingSpinnerComponent implements OnInit {
+  @Input()
+  loadingText: string = 'Loading...';
+
   mode: ProgressSpinnerMode = 'indeterminate';
 
   constructor() {}

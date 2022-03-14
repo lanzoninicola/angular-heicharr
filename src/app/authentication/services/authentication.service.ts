@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { AuthService, User } from '@auth0/auth0-angular';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { UserModel } from 'src/app/pages/users/models/user.model';
 
 @Injectable({
@@ -8,5 +9,13 @@ import { UserModel } from 'src/app/pages/users/models/user.model';
 export class AuthenticationService {
   stateUserAuth$ = new BehaviorSubject<UserModel | null>(null);
 
-  constructor() {}
+  get authUser$(): Observable<User | null | undefined> {
+    return this._authz.user$;
+  }
+
+  get isAuthenticated$(): Observable<boolean> {
+    return this._authz.isAuthenticated$;
+  }
+
+  constructor(private _authz: AuthService) {}
 }

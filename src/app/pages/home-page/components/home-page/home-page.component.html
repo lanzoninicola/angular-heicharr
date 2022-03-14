@@ -1,4 +1,4 @@
-<ng-container *ngIf="authz.isAuthenticated$ | async; else loadingUntil">
+<ng-container *ngIf="authService.isAuthenticated$ | async; else loadingUntil">
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav
       #drawer

@@ -24,7 +24,8 @@ import { UserSerializerService } from './user-serializer.service';
 export class UserService {
   stateUserSelected$ = new BehaviorSubject<UserModel | null>(null);
   stateEntityState$ = new BehaviorSubject<EntityState>('idle');
-  stateUserAuthenticated$ = new BehaviorSubject<UserModel | null>(null);
+  stateAuthCurrentUser$ = new BehaviorSubject<UserModel | null>(null);
+  stateAuthCurrentUserEmail$ = new BehaviorSubject<string | null>(null);
 
   constructor(
     private _http: UserHttpService,

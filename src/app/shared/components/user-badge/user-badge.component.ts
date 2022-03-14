@@ -15,10 +15,10 @@ import { UserService } from 'src/app/pages/users/services/user.service';
       ></div>
       <div class="user-details">
         <span class="fullname">
-          {{ (authService.user$ | async)?.name }}
+          {{ (userService.stateAuthCurrentUser$ | async)?.fullname }}
         </span>
         <span class="email">
-          {{ (authService.user$ | async)?.email }}
+          {{ (userService.stateAuthCurrentUser$ | async)?.email }}
         </span>
       </div>
     </div>
@@ -28,14 +28,8 @@ import { UserService } from 'src/app/pages/users/services/user.service';
 export class UserBadgeComponent implements OnInit {
   constructor(
     public authService: AuthService,
-    private _userService: UserService
+    public userService: UserService
   ) {}
 
-  ngOnInit(): void {
-    this._userService.stateUserAuthenticated$.subscribe((user) => {
-      console.log(user);
-    });
-
-    this.authService.user$.subscribe((user) => console.log(user));
-  }
+  ngOnInit(): void {}
 }

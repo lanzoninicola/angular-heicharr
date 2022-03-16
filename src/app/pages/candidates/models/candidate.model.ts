@@ -44,7 +44,7 @@ export class CandidateModel {
     return this.id;
   }
 
-  getFullName(): string {
+  get fullname(): string {
     return `${this.lastname} ${this.firstname}`;
   }
 

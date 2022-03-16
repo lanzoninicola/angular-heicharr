@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { CandidateDTO } from 'src/app/pages/candidates/types/candidate.dto.type';
-import { JobIdDTO } from 'src/app/pages/job-board/types/jobid.dto.type';
+import { JobIdDTO } from 'src/app/pages/job-id/types/jobid.dto.type';
 import { RequestToHireDTO } from 'src/app/pages/request-to-hire/types/request-to-hire.dto.type';
 import { BranchDTO } from 'src/app/pages/settings/models/branch.model';
 import { DepartmentDTO } from 'src/app/pages/settings/models/department.model';

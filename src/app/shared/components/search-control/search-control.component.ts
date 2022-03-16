@@ -41,7 +41,7 @@ export class SearchControlComponent implements OnInit, OnDestroy {
   @Input()
   dataSet$: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
 
-  formControlSubscription: Subscription;
+  formControlSubscription = new Subscription();
 
   searchValue: string;
   searchFormGroup: FormGroup;

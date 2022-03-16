@@ -51,10 +51,26 @@ const routes: Routes = [
   //     }),
   // },
   {
-    path: 'job-board',
+    path: 'job-application',
     loadChildren: () =>
-      import('./pages/job-board/job-board.module').then((m) => {
-        return m.JobBoardModule;
+      import('./pages/job-application/job-application.module').then((m) => {
+        return m.JobApplicationModule;
+      }),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'job-id',
+    loadChildren: () =>
+      import('./pages/job-id/job-id.module').then((m) => {
+        return m.JobIdModule;
+      }),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'interview',
+    loadChildren: () =>
+      import('./pages/interview/interview.module').then((m) => {
+        return m.InterviewModule;
       }),
     canActivate: [AuthGuard],
   },

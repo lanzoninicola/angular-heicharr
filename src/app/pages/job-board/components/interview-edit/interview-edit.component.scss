@@ -27,7 +27,8 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  .jobid-info {
+  .info-box {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -42,13 +43,25 @@ h3 {
         flex-direction: row;
         align-items: center;
         gap: 0.25rem;
-
-        span:first-child {
-          color: $grey;
-        }
       }
     }
+
+    .info-box-label {
+      position: absolute;
+      left: 0.5rem;
+      top: -0.7rem;
+      background: $grey-light;
+      padding-inline: 0.25rem;
+      font-weight: 600;
+      font-size: 85%;
+    }
   }
+}
+
+.label {
+  color: $grey;
+  font-size: 85%;
+  font-weight: 600;
 }
 
 mat-divider {

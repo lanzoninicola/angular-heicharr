@@ -46,12 +46,27 @@
         ></ahr-interview-status-form>
       </div>
 
-      <div class="candidate-info">candidate info</div>
+      <div class="info-box">
+        <div class="info-box-label">Candidate</div>
+        <div class="row">
+          <div class="candidate-name">
+            <span class="label">Name: </span>
+            <span>{{
+              (currentInterview$ | async)?.jobApplication?.candidate?.fullname
+            }}</span>
+          </div>
+          <div class="candidate-cv">
+            <span class="label">Curriculum: </span>
+            <span>link_to_cv</span>
+          </div>
+        </div>
+      </div>
 
-      <div class="jobid-info">
+      <div class="info-box">
+        <div class="info-box-label">Position</div>
         <div class="row">
           <div class="job-role">
-            <span>Role:</span>
+            <span class="label">Role:</span>
             <span>{{
               (currentInterview$ | async)!["jobApplication"]["jobId"][
                 "jobRole"
@@ -59,7 +74,7 @@
             }}</span>
           </div>
           <div class="job-role-level">
-            <span>Level:</span>
+            <span class="label">Level:</span>
             <span>{{
               (currentInterview$ | async)!["jobApplication"]["jobId"][
                 "roleLevel"
@@ -67,21 +82,11 @@
             }}</span>
           </div>
           <div class="branches">
-            <span>Branch Office:</span>
+            <span class="label">Branch Office:</span>
             <span>{{
               (currentInterview$ | async)!["jobApplication"]["jobId"][
                 "jobLocation"
               ]["name"]
-            }}</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="budget">
-            <span>Budget:</span>
-            <span>{{
-              (currentInterview$ | async)!["jobApplication"]["jobId"][
-                "requestToHire"
-              ]["budget"]
             }}</span>
           </div>
         </div>

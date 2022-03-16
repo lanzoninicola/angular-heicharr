@@ -1,7 +1,7 @@
 import { SelectOptionConfig } from 'src/app/dynamic-form/types/form-control.types';
 import { PicklistItemModel } from 'src/app/pages/settings/models/picklist-item.model';
 import { UserModel } from '../../users/models/user.model';
-import { JobApplicationModel } from '../../job-board/models/job-application.model';
+import { JobApplicationModel } from '../../job-application/models/job-application.model';
 
 export interface InterviewFormData {
   id: number;

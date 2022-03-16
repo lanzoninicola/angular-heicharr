@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InterviewRoundService } from '../../services/interview-round.service';
 import { InterviewService } from '../../services/interview.service';
-import { JobApplicationsService } from '../../../job-board/services/job-applications.service';
+import { JobApplicationsService } from '../../../job-application/services/job-applications.service';
 
 @Component({
   selector: 'ahr-interview-round-schedule-button',

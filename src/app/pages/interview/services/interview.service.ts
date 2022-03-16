@@ -8,9 +8,9 @@ import { InterviewCollection } from '../../interview/models/interview.collection
 import { InterviewModel } from '../../interview/models/interview.model';
 
 import { InterviewDTO } from '../../interview/types/interview.dto.type';
-import { JobsApplicationsCollection } from '../../job-board/models/job-application.collection';
-import { JobApplicationModel } from '../../job-board/models/job-application.model';
-import { JobApplicationsService } from '../../job-board/services/job-applications.service';
+import { JobsApplicationsCollection } from '../../job-application/models/job-application.collection';
+import { JobApplicationModel } from '../../job-application/models/job-application.model';
+import { JobApplicationsService } from '../../job-application/services/job-applications.service';
 import { InterviewFormData } from '../types/interview.form.type';
 import { InterviewHttpService } from './interview-http.service';
 import { InterviewSerializerService } from './interview-serializer.service';

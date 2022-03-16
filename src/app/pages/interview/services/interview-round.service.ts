@@ -4,7 +4,7 @@ import { BehaviorSubject, forkJoin, map, Observable, switchMap } from 'rxjs';
 import { InterviewRoundModel } from '../../interview/models/interview-round.model';
 import { InterviewCollection } from '../../interview/models/interview.collection';
 import { InterviewModel } from '../../interview/models/interview.model';
-import { JobApplicationModel } from '../../job-board/models/job-application.model';
+import { JobApplicationModel } from '../../job-application/models/job-application.model';
 
 import { InterviewRoundDTO } from '../types/interview-round.dto.type';
 import { InterviewRoundOnListTable } from '../types/interview.list.type';

@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { CandidateIdBadgeComponent } from 'src/app/pages/job-board/components/candidate-id-badge/candidate-id-badge.component';
-import { JobidBadgeComponent } from 'src/app/pages/job-board/components/jobid-badge/jobid-badge.component';
+import { CandidateIdBadgeComponent } from 'src/app/pages/candidates/components/candidate-id-badge/candidate-id-badge.component';
+import { JobidBadgeComponent } from 'src/app/pages/job-id/components/jobid-badge/jobid-badge.component';
 import { TableColumnConfig } from 'src/app/table-data/types/table.types';
 import { InterviewRoundOnListTable } from '../../../types/interview.list.type';
 

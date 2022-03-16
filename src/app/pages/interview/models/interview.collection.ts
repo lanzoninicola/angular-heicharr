@@ -1,5 +1,5 @@
 import { InterviewModel } from './interview.model';
-import { JobApplicationModel } from '../../job-board/models/job-application.model';
+import { JobApplicationModel } from '../../job-application/models/job-application.model';
 
 export class InterviewCollection {
   items: InterviewModel[];

@@ -1,5 +1,5 @@
 import { PicklistItemModel } from 'src/app/pages/settings/models/picklist-item.model';
-import { JobApplicationModel } from '../../job-board/models/job-application.model';
+import { JobApplicationModel } from '../../job-application/models/job-application.model';
 
 export class InterviewModel {
   id: number;

@@ -9,6 +9,7 @@ import { CoreModule } from 'src/app/core/core.module';
 import { DynamicFormModule } from 'src/app/dynamic-form/dynamic-form.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TableDataModule } from 'src/app/table-data/table-data.module';
+import { CandidatesModule } from '../candidates/candidates.module';
 
 import { InterviewEditComponent } from './components/interview-edit/interview-edit.component';
 import { InterviewFeedbackEditFormComponent } from './components/interview-edit/interview-feedback-edit/interview-feedback-edit-form/interview-feedback-edit-form.component';
@@ -57,6 +58,7 @@ import { InterviewRoutingModule } from './routing/interview-routing.module';
     SharedModule,
     DynamicFormModule,
     TableDataModule,
+    CandidatesModule,
   ],
   exports: [InterviewRoundListComponent],
 })

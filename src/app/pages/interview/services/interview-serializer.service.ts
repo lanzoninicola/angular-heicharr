@@ -4,7 +4,7 @@ import { PicklistItemModel } from 'src/app/pages/settings/models/picklist-item.m
 import { InterviewModel } from '../../interview/models/interview.model';
 
 import { InterviewDTO } from '../../interview/types/interview.dto.type';
-import { JobApplicationModel } from '../../job-board/models/job-application.model';
+import { JobApplicationModel } from '../../job-application/models/job-application.model';
 
 @Injectable({
   providedIn: 'root',

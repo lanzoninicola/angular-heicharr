@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { JobApplicationModel } from '../../../job-board/models/job-application.model';
+import { JobApplicationModel } from '../../../job-application/models/job-application.model';
 import { InterviewRoundService } from '../../services/interview-round.service';
 import { InterviewRoundOnListTable } from '../../types/interview.list.type';
 

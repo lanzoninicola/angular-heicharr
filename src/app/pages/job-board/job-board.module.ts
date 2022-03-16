@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
@@ -12,7 +13,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { TableDataModule } from 'src/app/table-data/table-data.module';
 
 import { CandidatesModule } from '../candidates/candidates.module';
-
 import { CandidateIdBadgeComponent } from './components/candidate-id-badge/candidate-id-badge.component';
 import { InterviewEditComponent } from './components/interview-edit/interview-edit.component';
 import { InterviewFeedbackEditFormComponent } from './components/interview-edit/interview-feedback-edit/interview-feedback-edit-form/interview-feedback-edit-form.component';
@@ -25,6 +25,8 @@ import { InterviewRoundComponent } from './components/interview-edit/interview-r
 import { InterviewRoundsComponent } from './components/interview-edit/interview-rounds/interview-rounds.component';
 import { InterviewStatusFormComponent } from './components/interview-edit/interview-status-form/interview-status-form.component';
 import { InterviewListTableComponent } from './components/interview-list-table/interview-list-table.component';
+import { InterviewRoundScheduleButtonComponent } from './components/interview-round-schedule-button/interview-round-schedule-button.component';
+import { InterviewRoundScheduleDialogComponent } from './components/interview-round-schedule-dialog/interview-round-schedule-dialog.component';
 import { InterviewRoundsListComponent } from './components/interview-rounds-list/interview-rounds-list.component';
 import { JobApplicationActivityEditComponent } from './components/job-application-edit/job-application-activity-edit/job-application-activity-edit.component';
 import { JobApplicationActivityFormComponent } from './components/job-application-edit/job-application-activity-edit/job-application-activity-form/job-application-activity-form.component';
@@ -77,6 +79,8 @@ import { JobBoardRoutingModule } from './routing/job-board-routing.module';
     InterviewFeedbackEditFormComponent,
     InterviewQuestionListComponent,
     InterviewQuestionItemComponent,
+    InterviewRoundScheduleDialogComponent,
+    InterviewRoundScheduleButtonComponent,
   ],
   imports: [
     CoreModule,
@@ -85,6 +89,7 @@ import { JobBoardRoutingModule } from './routing/job-board-routing.module';
     MatTabsModule,
     MatIconModule,
     MatDividerModule,
+    MatDialogModule,
     ReactiveFormsModule,
     MatCardModule,
     MatSliderModule,

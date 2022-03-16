@@ -59,6 +59,14 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'interview',
+    loadChildren: () =>
+      import('./pages/interview/interview.module').then((m) => {
+        return m.InterviewModule;
+      }),
+    canActivate: [AuthGuard],
+  },
+  {
     path: 'settings',
     loadChildren: () =>
       import('./pages/settings/settings.module').then((m) => {

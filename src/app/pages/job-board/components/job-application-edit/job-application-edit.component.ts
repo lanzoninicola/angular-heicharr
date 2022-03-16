@@ -11,7 +11,6 @@ import { EntityState } from 'src/app/core/types/entityState.type';
 import { FormState } from 'src/app/dynamic-form/types/form-state.types';
 
 import { JobApplicationModel } from '../../models/job-application.model';
-import { InterviewService } from '../../services/interview.service';
 import { JobApplicationsService } from '../../services/job-applications.service';
 import { JobBoardService } from '../../services/job-board.service';
 import { JobApplicationEditFormData } from '../../types/job-application.form.type';
@@ -43,7 +42,6 @@ export class JobApplicationEditComponent implements OnInit {
   constructor(
     private _dataService: JobBoardService,
     private _jaService: JobApplicationsService,
-    private _interviewService: InterviewService,
     public interviewRoundDialog: MatDialog
   ) {}
 

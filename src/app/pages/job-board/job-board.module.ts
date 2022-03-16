@@ -13,21 +13,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { TableDataModule } from 'src/app/table-data/table-data.module';
 
 import { CandidatesModule } from '../candidates/candidates.module';
+import { InterviewModule } from '../interview/interview.module';
 import { CandidateIdBadgeComponent } from './components/candidate-id-badge/candidate-id-badge.component';
-import { InterviewEditComponent } from './components/interview-edit/interview-edit.component';
-import { InterviewFeedbackEditFormComponent } from './components/interview-edit/interview-feedback-edit/interview-feedback-edit-form/interview-feedback-edit-form.component';
-import { InterviewFeedbackEditComponent } from './components/interview-edit/interview-feedback-edit/interview-feedback-edit.component';
-import { InterviewFeedbackListComponent } from './components/interview-edit/interview-feedback-list/interview-feedback-list.component';
-import { InterviewQuestionItemComponent } from './components/interview-edit/interview-question-item/interview-question-item.component';
-import { InterviewQuestionListComponent } from './components/interview-edit/interview-question-list/interview-question-list.component';
-import { InterviewRoundDetailsComponent } from './components/interview-edit/interview-rounds/interview-round-details/interview-round-details.component';
-import { InterviewRoundComponent } from './components/interview-edit/interview-rounds/interview-round/interview-round.component';
-import { InterviewRoundsComponent } from './components/interview-edit/interview-rounds/interview-rounds.component';
-import { InterviewStatusFormComponent } from './components/interview-edit/interview-status-form/interview-status-form.component';
-import { InterviewListTableComponent } from './components/interview-list-table/interview-list-table.component';
-import { InterviewRoundScheduleButtonComponent } from './components/interview-round-schedule-button/interview-round-schedule-button.component';
-import { InterviewRoundScheduleDialogComponent } from './components/interview-round-schedule-dialog/interview-round-schedule-dialog.component';
-import { InterviewRoundsListComponent } from './components/interview-rounds-list/interview-rounds-list.component';
 import { JobApplicationActivityEditComponent } from './components/job-application-edit/job-application-activity-edit/job-application-activity-edit.component';
 import { JobApplicationActivityFormComponent } from './components/job-application-edit/job-application-activity-edit/job-application-activity-form/job-application-activity-form.component';
 import { JobApplicationActivityListComponent } from './components/job-application-edit/job-application-activity-list/job-application-activity-list.component';
@@ -67,20 +54,6 @@ import { JobBoardRoutingModule } from './routing/job-board-routing.module';
     JobApplicationActivityFormComponent,
     JobApplicationActivityEditComponent,
     JobApplicationActivityListComponent,
-    InterviewRoundsListComponent,
-    InterviewEditComponent,
-    InterviewListTableComponent,
-    InterviewStatusFormComponent,
-    InterviewRoundsComponent,
-    InterviewRoundComponent,
-    InterviewRoundDetailsComponent,
-    InterviewFeedbackListComponent,
-    InterviewFeedbackEditComponent,
-    InterviewFeedbackEditFormComponent,
-    InterviewQuestionListComponent,
-    InterviewQuestionItemComponent,
-    InterviewRoundScheduleDialogComponent,
-    InterviewRoundScheduleButtonComponent,
   ],
   imports: [
     CoreModule,
@@ -97,6 +70,7 @@ import { JobBoardRoutingModule } from './routing/job-board-routing.module';
     TableDataModule,
     DynamicFormModule,
     CandidatesModule,
+    InterviewModule,
   ],
 })
 export class JobBoardModule {}
